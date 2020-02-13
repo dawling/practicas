@@ -11,6 +11,7 @@
     <title>Suma</title>
 </head>
 <body>
+    <h1>Suma de 2 numeros</h1>
     <form name="form1" method="post">
         Primer numero:
         <input type="text" name="num1">
