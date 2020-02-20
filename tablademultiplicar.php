@@ -18,11 +18,15 @@
         <input type="submit" value="Multiplicar">
         <br>
         <?php
-        for($i=1;$i<=10;$i++)
+        if(isset($_POST["txtnum"]))
         {
-            echo "$num X $i"."=".$num*$i;
-            echo "<br>";
-        } 
+            for($i=1;$i<=10;$i++)
+            {
+                echo "$num X $i"."=".$num*$i;
+                echo "<br>";
+            } 
+        }
+        
         ?>
     </form>
     </table>

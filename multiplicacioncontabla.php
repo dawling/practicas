@@ -15,7 +15,8 @@
         <br>
 <?php
 $numero=$_POST["txtnum"];
-echo "<table border=1 cellspacing=0 width=200>"; 
+//se crea la tabla
+echo "<table border=1 cellspacing=0 width=200 align=center>"; 
 //filas 1 tr de 2 
 echo "<tr>
   <th colspan=5>Tabla del $numero  </th>
