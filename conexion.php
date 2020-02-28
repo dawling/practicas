@@ -1,5 +1,5 @@
 <?php
-$mysqli = new mysqli("localhost", "root", "root", "practica1");
+$mysqli = new mysqli("localhost", "root", "root1234", "practica1");
 
 /* comprobar la conexión */
 if ($mysqli->connect_errno) 
@@ -13,3 +13,9 @@ else
 }
 mysqli_close($link);
 ?>
+
+1.-Conectarse al servidor y a la base de datos
+2.-generar consultas basicas
+(insert,delete, update, ---mysqli_query();
+select) mysqli_query, mysqli_ num_rows() , fetch_assoc
+3.- mysqli_close
