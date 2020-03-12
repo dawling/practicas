@@ -1,7 +1,7 @@
 <?php
  include("conex.php");
-
- if (isset($_POST["btnGuardar"]))
+ $existe="no";
+if (isset($_POST["btnGuardar"]))
  {
  	$iddepto = $_POST["TxtFolio"];
  	$descrip = $_POST["TxtDescrip"];
@@ -64,14 +64,14 @@ if (isset($_POST["btnBuscar"]))
 <form method="post" name="form1" id="form1" class="cuadro_perzonalizado">
 	<input type="hidden" name="txtExiste" value="<?php echo $existe ?>">
 	<label class="label_perzonalizado">Folio:</label>
-	<input type="text" name="TxtFolio" class="txtbox_perzonalizado" maxlength="3" size="4" value="<?php echo $iddepto ?>"><input type="submit" name="btnBuscar" value="Buscar" class="boton_personalizado">
+	<input type="text" required name="TxtFolio" class="txtbox_perzonalizado" maxlength="3" size="4" value="<?php echo $iddepto ?>"><input type="submit" name="btnBuscar" value="Buscar" class="boton_personalizado">
 	<br>
 	<label class="label_perzonalizado">Descripción:</label>
 	<input type="text" name="TxtDescrip" class="txtbox_perzonalizado" value="<?php echo $descrip ?>">
 	<br>
 	<br>
 	<input type="submit" name="btnGuardar" value="Guardar" class="boton_personalizado">
-	<input type="submit" name="btnEliminar" value="Eliminar" class="boton_personalizado">
+	<input type="submit" name="btnEliminar" value="Eliminar" class="boton_personalizado" <?php if ($existe=="no") echo "disabled"?> >
 	<input type="button" name="btnNuevo" value="Limpiar" onclick="limpiar()" class="boton_personalizado">
 </form>
 </body>
